@@ -1,8 +1,8 @@
 /************************************
 function test(){
   var hira = "あいうえお";
-  var kana = hira_kana(hira);
-  var hankana = hira_hankana(hira);
+  var kana = hira_to_kana(hira);
+  var hankana = hira_to_hankana(hira);
   Logger.log([hira, kana, hankana]);
 }
 => [あいうえお, アイウエオ, ｱｲｳｴｵ]
@@ -11,42 +11,42 @@ var hira = ["あ", "い", "う", "え", "お", "か", "き", "く", "け", "こ"
 var kana = ["ア", "イ", "ウ", "エ", "オ", "カ", "キ", "ク", "ケ", "コ", "サ", "シ", "ス", "セ", "ソ", "タ", "チ", "ツ", "テ", "ト", "ナ", "ニ", "ヌ", "ネ", "ノ", "ハ", "ヒ", "フ", "ヘ", "ホ", "マ", "ミ", "ム", "メ", "モ", "ヤ", "ユ", "ヨ", "ラ", "リ", "ル", "レ", "ロ", "ワ", "ヲ", "ン", "ガ", "ギ", "グ", "ゲ", "ゴ", "ザ", "ジ", "ズ", "ゼ", "ゾ", "ダ", "ヂ", "ヅ", "デ", "ド", "バ", "ビ", "フ", "ベ", "ボ", "パ", "ピ", "ピ", "ペ", "ポ", "ァ", "ィ", "ゥ", "ェ", "ォ", "ャ", "ュ", "ョ", "ッ", "ヴ", "ー"];
 var hankana = ["ｱ", "ｲ", "ｳ", "ｴ", "ｵ", "ｶ", "ｷ", "ｸ", "ｹ", "ｺ", "ｻ", "ｼ", "ｽ", "ｾ", "ｿ", "ﾀ", "ﾁ", "ﾂ", "ﾃ", "ﾄ", "ﾅ", "ﾆ", "ﾇ", "ﾈ", "ﾉ", "ﾊ", "ﾋ", "ﾌ", "ﾍ", "ﾎ", "ﾏ", "ﾐ", "ﾑ", "ﾒ", "ﾓ", "ﾔ", "ﾕ", "ﾖ", "ﾗ", "ﾘ", "ﾙ", "ﾚ", "ﾛ", "ﾜ", "ｦ", "ﾝ", "ｶﾞ", "ｷﾞ", "ｸﾞ", "ｹﾞ", "ｺﾞ", "ｻﾞ", "ｼﾞ", "ｽﾞ", "ｾﾞ", "ｿﾞ", "ﾀﾞ", "ﾁﾞ", "ﾂﾞ", "ﾃﾞ", "ﾄﾞ", "ﾊﾞ", "ﾋﾞ", "ﾌﾞ", "ﾍﾞ", "ﾎﾞ", "ﾊﾟ", "ﾋﾟ", "ﾌﾟ", "ﾍﾟ", "ﾎﾟ", "ｧ", "ｨ", "ｩ", "ｪ", "ｫ", "ｬ", "ｭ", "ｮ", "ｯ", "ｳﾞ", "ｰ"];
 
-function hira_kana(text){
+function hira_to_kana(text){
   var input = hira;
   var output = kana;
   var result = hira_kana_hankana(text, input, output);
   return result;
 }
 
-function hira_hankana(text){
+function hira_to_hankana(text){
   var input = hira;
   var output = hankana;
   var result = hira_kana_hankana(text, input, output);
   return result;
 }
 
-function kana_hankana(text){
+function kana_to_hankana(text){
   var input = kana;
   var output = hankana;
   var result = hira_kana_hankana(text, input, output);
   return result;
 }
 
-function kana_hira(text){
+function kana_to_hira(text){
   var input = kana;
   var output = hira;
   var result = hira_kana_hankana(text, input, output);
   return result;
 }
 
-function hankana_hira(text){
+function hankana_to_hira(text){
   var input = hankana;
   var output = hira;
   var result = hira_kana_hankana(text, input, output);
   return result;
 }
 
-function hankana_kana(text){
+function hankana_to_kana(text){
   var input = hankana;
   var output = kana;
   var result = hira_kana_hankana(text, input, output);
