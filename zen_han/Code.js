@@ -3,19 +3,19 @@ use case
 
 function test1(){
   var zen = "ａｂｃＡＢＣ１２３";
-  var han = zen_han(zen);
+  var han = to_han(zen);
   Logger.log(han);
 }
 => abcABC123
 
 function test2(){
   var han = "abcABC123";
-  var zen = han_zen(han);
+  var zen = to_zen(han);
   Logger.log(zen);
 }
 => ａｂｃＡＢＣ１２３
 ************************************/
-function zen_han(zen) {
+function to_han(zen) {
   var han = "";
   var pattern = /[！-～]/;
   for (var i = 0; i < zen.length; i++) {
@@ -29,7 +29,7 @@ function zen_han(zen) {
   return han;
 }
 
-function han_zen(han) {
+function to_zen(han) {
   var zen = "";
   var pattern = /[!-~]/;
   for (var i = 0; i < han.length; i++) {
