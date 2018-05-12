@@ -3,7 +3,7 @@ function test(){
   var hira = "あいうえお";
   var kana = hira_kana(hira);
   var hankana = hira_hankana(hira);
-  Logger.log([hira, kana, hanakana]);
+  Logger.log([hira, kana, hankana]);
 }
 => [あいうえお, アイウエオ, ｱｲｳｴｵ]
 ************************************/
