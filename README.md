@@ -1,10 +1,8 @@
 # google-apps-script
 
 hira_kana_hankana<br>
+1kcbDXO19QQKayQubupetvRq_8QXo7H9uIoBjNHViCr85cn6Ms8s-NvRZ<br>
 https://github.com/prepractice/google-apps-script/blob/master/hira_kana_hankana/Code.js<br>
-1kcbDXO19QQKayQubupetvRq_8QXo7H9uIoBjNHViCr85cn6Ms8s-NvRZ
-<br>
-<br>
 function<br>
 hira_to_kana(text)<br>
 hira_to_hankana(text)<br>
@@ -15,10 +13,8 @@ hankana_to_kana(text)<br>
 <br>
 <br>
 text_split<br>
+1UIj_253yV8B4FWWVgt5ugeqB8-_VEeX7gspNz-nelne-qbNLrf0Qppgq<br>
 https://github.com/prepractice/google-apps-script/blob/master/text_split/Code.js<br>
-1UIj_253yV8B4FWWVgt5ugeqB8-_VEeX7gspNz-nelne-qbNLrf0Qppgq
-<br>
-<br>
 function<br>
 text_split(text, regexp)<br>
 text_split_with_hira(text)<br>
