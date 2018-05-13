@@ -4,6 +4,7 @@ hira_kana_hankana<br>
 https://github.com/prepractice/google-apps-script/blob/master/hira_kana_hankana/Code.js<br>
 1kcbDXO19QQKayQubupetvRq_8QXo7H9uIoBjNHViCr85cn6Ms8s-NvRZ
 <br>
+<br>
 function<br>
 hira_to_kana(text)<br>
 hira_to_hankana(text)<br>
