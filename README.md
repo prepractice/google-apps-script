@@ -8,7 +8,7 @@ hira_to_hankana(text)<br>
 kana_to_hankana(text)<br>
 kana_to_hira(text)<br>
 hankana_to_hira(text)<br>
-hankana_to_kana(text)<br>
+hankana_to_kana(text)
 <br>
 <br>
 ## text_split<br>
