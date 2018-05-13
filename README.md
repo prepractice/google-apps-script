@@ -47,3 +47,13 @@ to_lower(text)<br>
 to_upper(text)
 <br>
 <br>
+and_regexp<br>
+https://github.com/prepractice/google-apps-script/blob/master/and_regexp/Code.js
+<br>
+17NgmbzcLVa0E-8h9EQOGLmurGJ1xRWcATCTd6J_6lUnh8qEU7iXzEr7M
+<br>
+<br>
+function<br>
+get_and_regexp(match_words)
+<br>
+<br>
