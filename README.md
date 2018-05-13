@@ -4,6 +4,13 @@ hira_kana_hankana<br>
 https://github.com/prepractice/google-apps-script/blob/master/hira_kana_hankana/Code.js<br>
 1kcbDXO19QQKayQubupetvRq_8QXo7H9uIoBjNHViCr85cn6Ms8s-NvRZ
 <br>
+function
+hira_to_kana(text)<br>
+hira_to_hankana(text)<br>
+kana_to_hankana(text)<br>
+kana_to_hira(text)<br>
+hankana_to_hira(text)<br>
+hankana_to_kana(text)<br>
 <br>
 text_split<br>
 https://github.com/prepractice/google-apps-script/blob/master/text_split/Code.js<br>
