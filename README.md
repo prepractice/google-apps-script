@@ -18,6 +18,7 @@ text_split<br>
 https://github.com/prepractice/google-apps-script/blob/master/text_split/Code.js<br>
 1UIj_253yV8B4FWWVgt5ugeqB8-_VEeX7gspNz-nelne-qbNLrf0Qppgq
 <br>
+<br>
 function<br>
 text_split(text, regexp)<br>
 text_split_with_hira(text)<br>
@@ -29,6 +30,7 @@ https://github.com/prepractice/google-apps-script/blob/master/zen_han/Code.js
 <br>
 1voHIY_nQ5lztODIApEuSYGFUF6gwTd83BGYniBgISJSPfgKIILLeOmX-
 <br>
+<br>
 function<br>
 to_han(zen)<br>
 to_zen(han)
@@ -38,6 +40,7 @@ upper_lower<br>
 https://github.com/prepractice/google-apps-script/blob/master/upper_lower/Code.js
 <br>
 17uIXL1oay0WMOaVjHTC0Yhb2iiWoKW_CR0hBTpbGT-QyR4OHaYp-HzEk
+<br>
 <br>
 function<br>
 to_lower(text)<br>
