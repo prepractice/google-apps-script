@@ -11,15 +11,17 @@
   <textarea id="drop_ta" class="ta"></textarea>drop
 
   <div id="box1" class="box1">
-    <span id="ame" class="card" draggable="true"><label>あめ</label></span>
-    <span id="choco" class="card" draggable="true"><label>ちょこ</label></span>
-    <span class="card" draggable="false"><label>だみー</label></span>
+    <div id="ame" class="card" draggable="true"><label>あめ</label></div>
+    <div id="choco" class="card" draggable="true"><label>ちょこ</label></div>
+    <div class="card" draggable="false"><label>だみー</label></div>
   </div>
   <div id="box2" class="box2">
-    <span id="gum" class="card" draggable="true"><label>がむ</label></span>
-    <span class="card" draggable="false"><label>だみー</label></span>
+    <div id="gum" class="card" draggable="true"><label>がむ</label></div>
+    <div class="card" draggable="false"><label>だみー</label></div>
   </div>
 </div>
   <?!= include('script'); ?>
+  <?!= include('global'); ?>
+  <?!= include('dragdrop'); ?>
 </body>
 </html>

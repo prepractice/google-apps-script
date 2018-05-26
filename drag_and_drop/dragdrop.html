@@ -1,0 +1,63 @@
+<script>
+/************************************
+ドラッグ開始時の処理
+var drag_elem_id;をグローバルにしたらdataTransfer不要？
+************************************/
+function drag_start(event){
+  current_ta.value = event.currentTarget.innerHTML;
+  start_ta.value = event.target.innerHTML;
+  var drag_elem_id = event.target.id;
+  event.dataTransfer.setData("text", drag_elem_id);//ドラッグするデータのid名をDataTransferオブジェクトにセット
+}
+
+/************************************
+ドラッグ要素がドロップ要素に重なっている間の処理
+************************************/
+var over_elem;
+function drag_over(event){
+  current_ta.value = event.currentTarget.innerHTML;
+  over_ta.value = event.target.innerHTML;
+  over_elem = event.target//.parentNode;//overしている要素はlabelなので親のdivまで取得
+  event.preventDefault();
+}
+
+/************************************
+ドロップ時の処理
+************************************/
+function drag_drop(event){
+  current_ta.value = event.currentTarget.innerHTML;
+  drop_ta.value = event.target.innerHTML;//ドラッグされたデータのid名をDataTransferオブジェクトから取得
+  var drag_elem_id = event.dataTransfer.getData("text");//setData("text", drag_elem_id)でセットしたdrag_elem_idを"text"で取得
+  var drag_elm = get_elem(drag_elem_id);
+  add_elem(event, drag_elm);
+  event.preventDefault();
+}
+
+function add_elem(event, drag_elm){
+  var over_elem_parent = over_elem.parentNode;
+  if(over_elem_parent.className.match(/card/)){//overした要素の親がcardなら
+    event.currentTarget.insertBefore(drag_elm, over_elem_parent);//overしたdivの前に追加する
+  }else{//cardじゃなければ現在のbox内のdummyの前に追加する
+    var divs = over_elem.getElementsByTagName("div");
+    var len = divs.length;
+    var last_elem = divs[len - 1];
+    event.currentTarget.insertBefore(drag_elm, last_elem);
+  }
+}
+/************************************
+idやclassで要素を指定して
+addEventListenerを追加する
+************************************/
+var boxes = document.querySelectorAll('.box1, .box2');
+var boxes_array = [];
+boxes_array.forEach.call(boxes, function(box) {
+  box.addEventListener('dragover', drag_over, false);
+  box.addEventListener('drop', drag_drop, false);
+});
+
+var cards = document.querySelectorAll('.card');
+var cards_array = [];
+cards_array.forEach.call(cards, function(card) {
+  card.addEventListener('dragstart', drag_start, false);
+});
+</script>
