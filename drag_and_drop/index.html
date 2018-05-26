@@ -4,15 +4,22 @@
   <?!= include('style'); ?>
 </head>
 <body>
-  <textarea id="start_ta" class="ta"></textarea><br>
-  <textarea id="over_ta" class="ta"></textarea><br>
-  <textarea id="drop_ta" class="ta"></textarea>
+<div id="main_div">
+  <textarea id="current_ta" class="ta"></textarea>current_target
+  <textarea id="start_ta" class="ta"></textarea>start<br>
+  <textarea id="over_ta" class="ta"></textarea>over<br>
+  <textarea id="drop_ta" class="ta"></textarea>drop
 
   <div id="box1" class="box1">
-    <span id="ame" class="card" draggable="true">あめ</span>
-    <span id="choco" class="card" draggable="true">ちょこ</span>
+    <span id="ame" class="card" draggable="true"><label>あめ</label></span>
+    <span id="choco" class="card" draggable="true"><label>ちょこ</label></span>
+    <span class="card" draggable="false"><label>だみー</label></span>
   </div>
-  <div id="box2" class="box2"></div>
+  <div id="box2" class="box2">
+    <span id="gum" class="card" draggable="true"><label>がむ</label></span>
+    <span class="card" draggable="false"><label>だみー</label></span>
+  </div>
+</div>
   <?!= include('script'); ?>
 </body>
 </html>
