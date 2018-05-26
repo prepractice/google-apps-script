@@ -1,0 +1,46 @@
+<script>
+/************************************
+グローバル
+************************************/
+var box1 = get_elem("box1");
+var box2 = get_elem("box2");
+var ame = get_elem("ame");
+var choco = get_elem("choco");
+var start_ta = get_elem("start_ta");
+var over_ta = get_elem("over_ta");
+var drop_ta = get_elem("drop_ta");
+
+/************************************
+要素を取得する
+************************************/
+function get_elem(id){
+  return document.getElementById(id);
+}
+
+/************************************
+ドラッグ開始時の処理
+************************************/
+function drag_start(event){
+  start_ta.value = event.target.id + event.target.outerHTML;
+  event.dataTransfer.setData("text", event.target.id);//ドラッグするデータのid名をDataTransferオブジェクトにセット
+}
+
+/************************************
+ドラッグ要素がドロップ要素に重なっている間の処理
+************************************/
+function drag_over(event){
+  over_ta.value = event.target.id + event.target.outerHTML;//dragoverイベントをキャンセルして、ドロップ先の要素がドロップを受け付けるようにする
+  event.preventDefault();
+}
+
+/************************************
+ドロップ時の処理
+************************************/
+function drag_drop(event){
+  drop_ta.value = event.target.id + event.target.outerHTML;//ドラッグされたデータのid名をDataTransferオブジェクトから取得
+  var id_name = event.dataTransfer.getData("text");//id名からドラッグされた要素を取得
+  var drag_elm =document.getElementById(id_name);//ドロップ先にドラッグされた要素を追加
+  event.currentTarget.appendChild(drag_elm);//エラー回避のため、ドロップ処理の最後にdropイベントをキャンセルしておく
+  event.preventDefault();
+}
+</script>
