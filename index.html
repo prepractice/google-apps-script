@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <?!= include('style'); ?>
+</head>
+<body>
+  <textarea id="start_ta" class="ta"></textarea><br>
+  <textarea id="over_ta" class="ta"></textarea><br>
+  <textarea id="drop_ta" class="ta"></textarea>
+
+  <div id="box1" class="box1" ondragover="drag_over(event)" ondrop="drag_drop(event)">
+    <span id="ame" class="card" draggable="true" ondragstart="drag_start(event)">あめ</span>
+    <span id="choco" class="card" draggable="true" ondragstart="drag_start(event)">ちょこ</span>
+  </div>
+  <div id="box2" class="box2" ondragover="drag_over(event)" ondrop="drag_drop(event)">
+  </div>
+  <?!= include('script'); ?>
+</body>
+</html>
