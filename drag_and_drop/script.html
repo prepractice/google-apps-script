@@ -9,7 +9,13 @@ var choco = get_elem("choco");
 var start_ta = get_elem("start_ta");
 var over_ta = get_elem("over_ta");
 var drop_ta = get_elem("drop_ta");
-
+  
+box1.ondragover = drag_over;
+box1.ondrop = drag_drop;
+box2.ondragover = drag_over;
+box2.ondrop = drag_drop;
+ame.ondragstart = drag_start;
+choco.ondragstart = drag_start;
 /************************************
 要素を取得する
 ************************************/
