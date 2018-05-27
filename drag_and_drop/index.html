@@ -8,18 +8,24 @@
   <textarea id="current_ta" class="ta"></textarea>current_target
   <textarea id="start_ta" class="ta"></textarea>start<br>
   <textarea id="over_ta" class="ta"></textarea>over<br>
+  <textarea id="leave_ta" class="ta"></textarea>leave
   <textarea id="drop_ta" class="ta"></textarea>drop
 
   <div id="box1" class="box1">
-    <span id="ame" class="card" draggable="true"><label>あめ</label></span>
-    <span id="choco" class="card" draggable="true"><label>ちょこ</label></span>
-    <span class="card" draggable="false"><label>だみー</label></span>
+    <div id="ame" class="card" draggable="true"><label>あめ</label></div>
+    <div id="choco" class="card" draggable="true"><label>ちょこ</label></div>
+    <div class="card display_none" draggable="false"><label>だみー</label></div>
   </div>
   <div id="box2" class="box2">
-    <span id="gum" class="card" draggable="true"><label>がむ</label></span>
-    <span class="card" draggable="false"><label>だみー</label></span>
+    <div id="gum" class="card" draggable="true"><label>がむ</label></div>
+    <div id="ice" class="card" draggable="true"><label>あいす</label></div>
+    <div id="cake" class="card" draggable="true"><label>けーき</label></div>
+    <div id="potechi" class="card" draggable="true"><label>ぽてち</label></div>
+    <div class="card display_none" draggable="false"><label>だみー</label></div>
   </div>
 </div>
   <?!= include('script'); ?>
+  <?!= include('global'); ?>
+  <?!= include('dragdrop'); ?>
 </body>
 </html>

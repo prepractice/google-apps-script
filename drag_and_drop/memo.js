@@ -41,4 +41,18 @@ cards_array.forEach.call(cards, function(card) {
   card.addEventListener('drop', drag_drop, false);
   card.addEventListener('dragend', drag_end, false);
 });
+
+
+//drag_overとdrag_dropの対象になる要素(子要素も)
+//main_div.ondragover = drag_over;
+//box1.ondragover = drag_over;
+//box1.ondrop = drag_drop;
+//box2.ondragover = drag_over;
+//box2.ondrop = drag_drop;
+
+//drag_startできる要素
+//ame.ondragstart = drag_start;
+//choco.ondragstart = drag_start;
+
+//event.currentTarget.appendChild(drag_elm);
 ************************************/
